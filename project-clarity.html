@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clarity Coach AI - Dylan Bray Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <style>
+        .project-detail {
+            padding: 100px 0 80px;
+            background: white;
+        }
+        .project-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        .project-header h1 {
+            font-size: 2.5rem;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+        }
+        .project-meta {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-secondary);
+        }
+        .project-body {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .project-section {
+            margin-bottom: 3rem;
+        }
+        .project-section h2 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+        }
+        .project-section p {
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+        .project-section ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        .project-section li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            color: var(--text-secondary);
+        }
+        .project-section li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--success-color);
+            font-weight: bold;
+        }
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+        .tech-badge {
+            background: var(--bg-light);
+            color: var(--primary-color);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: 500;
+        }
+        .embedded-content {
+            background: var(--bg-light);
+            padding: 2rem;
+            border-radius: 12px;
+            margin: 2rem 0;
+            text-align: center;
+        }
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            transition: gap 0.3s ease;
+        }
+        .back-btn:hover {
+            gap: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Dylan Bray</a>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html#home" class="nav-link">Home</a></li>
+                <li><a href="index.html#about" class="nav-link">About</a></li>
+                <li><a href="index.html#projects" class="nav-link">Projects</a></li>
+                <li><a href="index.html#skills" class="nav-link">Skills</a></li>
+                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Project Detail -->
+    <section class="project-detail">
+        <div class="container">
+            <a href="index.html#projects" class="back-btn">
+                <i class="fas fa-arrow-left"></i> Back to Projects
+            </a>
+            
+            <div class="project-header">
+                <h1>Clarity Coach AI</h1>
+                <p style="font-size: 1.2rem; color: var(--text-secondary); max-width: 700px; margin: 0 auto;">
+                    Production RAG-based educational platform utilizing LLM APIs, vector embeddings, 
+                    and semantic search for personalized learning experiences
+                </p>
+                <div class="project-meta">
+                    <div class="meta-item">
+                        <i class="fas fa-calendar"></i>
+                        <span>2024-2025</span>
+                    </div>
+                    <div class="meta-item">
+                        <i class="fas fa-award"></i>
+                        <span>EITM Grant Recipient</span>
+                    </div>
+                    <div class="meta-item">
+                        <i class="fas fa-code"></i>
+                        <span>AI/ML Development</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-body">
+                <div class="project-section">
+                    <h2>Project Overview</h2>
+                    <p>
+                        Clarity Coach AI is an AI-powered educational technology application that leverages 
+                        Retrieval-Augmented Generation (RAG) to deliver personalized, contextually-aware learning 
+                        experiences. Developed as part of the Entrepreneur in the Making Grant from Scotiabank and NSCC, 
+                        this project demonstrates advanced capabilities in LLM integration, vector database implementation, 
+                        and intelligent content retrieval systems.
+                    </p>
+                    <p>
+                        The platform combines speech analysis technology with automated learning pathway generation, 
+                        creating adaptive educational content tailored to individual user needs. This dual-purpose 
+                        application serves both speech pathology clinical use and general educational enhancement.
+                    </p>
+                </div>
+
+                <div class="project-section">
+                    <h2>Problem Statement</h2>
+                    <p>
+                        Traditional educational platforms lack the ability to dynamically adapt content based on 
+                        individual learning patterns and speech characteristics. Educators and speech pathologists 
+                        need tools that can:
+                    </p>
+                    <ul>
+                        <li>Provide real-time, contextually relevant feedback</li>
+                        <li>Analyze speech patterns for educational and clinical applications</li>
+                        <li>Generate personalized learning pathways automatically</li>
+                        <li>Scale intelligent tutoring without increasing human resource requirements</li>
+                        <li>Integrate seamlessly with existing educational workflows</li>
+                    </ul>
+                </div>
+
+                <div class="project-section">
+                    <h2>Technical Solution</h2>
+                    <p>
+                        The application architecture implements a full RAG pipeline with the following components:
+                    </p>
+                    <ul>
+                        <li><strong>Vector Database Integration:</strong> Implemented semantic search using embedding models to retrieve contextually relevant educational content from large knowledge bases</li>
+                        <li><strong>LLM API Integration:</strong> Developed prompt engineering strategies and context management systems for generating personalized responses and learning materials</li>
+                        <li><strong>Automated Learning Pathways:</strong> Built intelligent routing system that adapts content delivery based on user progress, learning style, and performance metrics</li>
+                        <li><strong>Speech Analysis Engine:</strong> Trained and tested machine learning models for speech pattern recognition and analysis</li>
+                        <li><strong>User Interface:</strong> Designed intuitive, accessible interface optimized for educational workflows and real-time interaction</li>
+                    </ul>
+                </div>
+
+                <div class="project-section">
+                    <h2>Technologies & Tools</h2>
+                    <div class="tech-stack">
+                        <span class="tech-badge">Python</span>
+                        <span class="tech-badge">LangChain</span>
+                        <span class="tech-badge">OpenAI API</span>
+                        <span class="tech-badge">Vector Embeddings</span>
+                        <span class="tech-badge">Pinecone/ChromaDB</span>
+                        <span class="tech-badge">scikit-learn</span>
+                        <span class="tech-badge">Whisper API</span>
+                        <span class="tech-badge">React/Next.js</span>
+                        <span class="tech-badge">FastAPI</span>
+                        <span class="tech-badge">PostgreSQL</span>
+                    </div>
+                </div>
+
+                <div class="project-section">
+                    <h2>Key Features & Capabilities</h2>
+                    <ul>
+                        <li>Retrieval-Augmented Generation for intelligent content delivery</li>
+                        <li>Real-time speech analysis and feedback generation</li>
+                        <li>Automated learning pathway creation based on user progress</li>
+                        <li>Context-aware prompt engineering for personalized responses</li>
+                        <li>Semantic search across educational content libraries</li>
+                        <li>Model evaluation and optimization workflows</li>
+                        <li>Scalable architecture for production deployment</li>
+                        <li>Analytics dashboard for tracking learning outcomes</li>
+                    </ul>
+                </div>
+
+                <div class="project-section">
+                    <h2>Development Process</h2>
+                    <p>
+                        <strong>Research Phase:</strong> Conducted extensive research on RAG architectures, 
+                        LLM capabilities, and educational technology best practices. Evaluated various embedding 
+                        models and vector databases for optimal performance.
+                    </p>
+                    <p>
+                        <strong>Model Training:</strong> Trained and tested machine learning models for speech 
+                        analysis, conducting iterative optimization and validation testing to ensure accuracy 
+                        and real-world applicability.
+                    </p>
+                    <p>
+                        <strong>RAG Implementation:</strong> Built end-to-end RAG pipeline including document 
+                        processing, embedding generation, vector storage, retrieval mechanisms, and response 
+                        generation with LLM integration.
+                    </p>
+                    <p>
+                        <strong>User Testing:</strong> Conducted user experience testing with educators and 
+                        students to refine interface design and optimize automated learning pathway logic.
+                    </p>
+                </div>
+
+                <div class="project-section">
+                    <h2>Outcomes & Impact</h2>
+                    <ul>
+                        <li>Successfully deployed production-ready RAG-based application</li>
+                        <li>Demonstrated proficiency in full AI/ML development lifecycle</li>
+                        <li>Secured EITM Grant funding based on technical merit and innovation</li>
+                        <li>Created scalable framework applicable to various educational contexts</li>
+                        <li>Gained hands-on experience with cutting-edge AI/LLM technologies</li>
+                    </ul>
+                </div>
+
+                <div class="embedded-content">
+                    <h3 style="color: var(--primary-color); margin-bottom: 1rem;">Download Full Project Documentation</h3>
+                    <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">
+                        Access detailed technical documentation, architecture diagrams, and code samples
+                    </p>
+                    <a href="https://drive.google.com/file/d/YOUR_CLARITY_PORTFOLIO_ID/view" 
+                       target="_blank" 
+                       class="btn btn-primary">
+                        <i class="fas fa-download"></i> Download Portfolio (PDF)
+                    </a>
+                </div>
+
+                <div class="project-section">
+                    <h2>Skills Demonstrated</h2>
+                    <div class="tech-stack">
+                        <span class="tech-badge">RAG Systems</span>
+                        <span class="tech-badge">LLM Integration</span>
+                        <span class="tech-badge">Vector Embeddings</span>
+                        <span class="tech-badge">Machine Learning</span>
+                        <span class="tech-badge">Prompt Engineering</span>
+                        <span class="tech-badge">API Development</span>
+                        <span class="tech-badge">UI/UX Design</span>
+                        <span class="tech-badge">Model Training</span>
+                        <span class="tech-badge">System Architecture</span>
+                        <span class="tech-badge">Production Deployment</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Dylan Patrick Bray. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="https://www.linkedin.com/in/dylanbrayitsolutions" target="_blank">LinkedIn</a>
+                <a href="https://github.com/YOUR_GITHUB" target="_blank">GitHub</a>
+                <a href="mailto:dpbray79@gmail.com">Email</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

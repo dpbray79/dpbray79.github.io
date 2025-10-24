@@ -1,0 +1,309 @@
+═══════════════════════════════════════════════════════════════
+🚀 TERMINAL DEPLOYMENT WALKTHROUGH
+═══════════════════════════════════════════════════════════════
+
+Follow these exact commands in your terminal to deploy your portfolio.
+Replace [YOUR-USERNAME] with your actual GitHub username throughout.
+
+═══════════════════════════════════════════════════════════════
+PREREQUISITE: Create GitHub Repository First!
+═══════════════════════════════════════════════════════════════
+
+Before running these commands:
+1. Go to: https://github.com/new
+2. Repository name: [YOUR-USERNAME].github.io
+3. Make it PUBLIC
+4. DON'T check any boxes (no README, no .gitignore)
+5. Click "Create repository"
+
+═══════════════════════════════════════════════════════════════
+STEP 1: Open Terminal
+═══════════════════════════════════════════════════════════════
+
+Mac: 
+  • Press Cmd + Space
+  • Type "Terminal"
+  • Press Enter
+
+Windows:
+  • Press Win + R
+  • Type "cmd" or "powershell"
+  • Press Enter
+
+Linux:
+  • Press Ctrl + Alt + T
+
+═══════════════════════════════════════════════════════════════
+STEP 2: Navigate to Your Portfolio Folder
+═══════════════════════════════════════════════════════════════
+
+Command:
+  cd /path/to/portfolio
+
+Example (Mac/Linux):
+  cd ~/Downloads/portfolio
+
+Example (Windows):
+  cd C:\Users\YourName\Downloads\portfolio
+
+Verify you're in the right place:
+  ls -la
+  (or 'dir' on Windows)
+
+You should see:
+  - index.html
+  - styles.css
+  - script.js
+  - etc.
+
+═══════════════════════════════════════════════════════════════
+STEP 3: Check Git Installation
+═══════════════════════════════════════════════════════════════
+
+Command:
+  git --version
+
+Expected output:
+  git version 2.x.x
+
+If you get "command not found":
+  • Mac: brew install git
+  • Windows: https://git-scm.com/downloads
+  • Linux: sudo apt-get install git
+
+═══════════════════════════════════════════════════════════════
+STEP 4: Configure Git (First Time Only)
+═══════════════════════════════════════════════════════════════
+
+Set your name:
+  git config --global user.name "Your Name"
+
+Set your email:
+  git config --global user.email "your.email@example.com"
+
+Verify:
+  git config --global --list
+
+═══════════════════════════════════════════════════════════════
+STEP 5: Initialize Git Repository
+═══════════════════════════════════════════════════════════════
+
+Command:
+  git init
+
+Expected output:
+  Initialized empty Git repository in /path/to/portfolio/.git/
+
+This creates a hidden .git folder.
+
+═══════════════════════════════════════════════════════════════
+STEP 6: Add All Files to Git
+═══════════════════════════════════════════════════════════════
+
+Command:
+  git add .
+
+(The dot means "all files")
+
+Check what was added:
+  git status
+
+You should see all your files listed in green.
+
+═══════════════════════════════════════════════════════════════
+STEP 7: Create Initial Commit
+═══════════════════════════════════════════════════════════════
+
+Command:
+  git commit -m "Initial portfolio deployment"
+
+Expected output:
+  [main (root-commit) xxxxxxx] Initial portfolio deployment
+   X files changed, XXX insertions(+)
+
+This saves your files locally.
+
+═══════════════════════════════════════════════════════════════
+STEP 8: Rename Branch to Main
+═══════════════════════════════════════════════════════════════
+
+Command:
+  git branch -M main
+
+This ensures your branch is called "main" (GitHub's default).
+
+═══════════════════════════════════════════════════════════════
+STEP 9: Add GitHub Remote
+═══════════════════════════════════════════════════════════════
+
+Command (REPLACE [YOUR-USERNAME]):
+  git remote add origin https://github.com/[YOUR-USERNAME]/[YOUR-USERNAME].github.io.git
+
+Example:
+  git remote add origin https://github.com/dylanbray/dylanbray.github.io.git
+
+Verify remote was added:
+  git remote -v
+
+Should show:
+  origin  https://github.com/[YOUR-USERNAME]/[YOUR-USERNAME].github.io.git (fetch)
+  origin  https://github.com/[YOUR-USERNAME]/[YOUR-USERNAME].github.io.git (push)
+
+═══════════════════════════════════════════════════════════════
+STEP 10: Push to GitHub
+═══════════════════════════════════════════════════════════════
+
+Command:
+  git push -u origin main
+
+You'll be prompted:
+  Username for 'https://github.com': [YOUR-USERNAME]
+  Password for 'https://[YOUR-USERNAME]@github.com':
+
+⚠️  IMPORTANT: Password = Personal Access Token (NOT your password!)
+
+To create token:
+  1. Go to: https://github.com/settings/tokens
+  2. Click "Generate new token (classic)"
+  3. Name: "Portfolio Deployment"
+  4. Check "repo" (all sub-options)
+  5. Click "Generate token"
+  6. COPY THE TOKEN (you won't see it again!)
+  7. Paste as password
+
+Expected output after push:
+  Enumerating objects: XX, done.
+  Counting objects: 100% (XX/XX), done.
+  ...
+  To https://github.com/[YOUR-USERNAME]/[YOUR-USERNAME].github.io.git
+   * [new branch]      main -> main
+
+═══════════════════════════════════════════════════════════════
+STEP 11: Enable GitHub Pages
+═══════════════════════════════════════════════════════════════
+
+Now go to your browser:
+
+1. Visit: https://github.com/[YOUR-USERNAME]/[YOUR-USERNAME].github.io
+
+2. Click "Settings" tab (top right)
+
+3. Click "Pages" in left sidebar (under "Code and automation")
+
+4. Under "Source":
+   • Branch: Select "main"
+   • Folder: Leave as "/ (root)"
+
+5. Click "Save"
+
+You'll see a message:
+  "Your site is ready to be published at https://[YOUR-USERNAME].github.io"
+
+6. Wait 2-3 minutes
+
+7. Refresh the Settings → Pages page
+
+8. You'll see:
+   "Your site is published at https://[YOUR-USERNAME].github.io"
+
+═══════════════════════════════════════════════════════════════
+STEP 12: Test Your Live Site!
+═══════════════════════════════════════════════════════════════
+
+Visit:
+  https://[YOUR-USERNAME].github.io
+
+🎉 Your portfolio is LIVE!
+
+═══════════════════════════════════════════════════════════════
+MAKING UPDATES LATER
+═══════════════════════════════════════════════════════════════
+
+When you want to update your site:
+
+1. Edit your files (index.html, etc.)
+
+2. Add changes:
+   git add .
+
+3. Commit:
+   git commit -m "Updated portfolio"
+
+4. Push:
+   git push
+
+5. Changes appear in 1-2 minutes!
+
+═══════════════════════════════════════════════════════════════
+TROUBLESHOOTING
+═══════════════════════════════════════════════════════════════
+
+ERROR: "fatal: remote origin already exists"
+FIX:
+  git remote remove origin
+  Then try adding remote again
+
+ERROR: "Authentication failed"
+FIX:
+  • Make sure you're using Personal Access Token, not password
+  • Token must have "repo" permissions
+  • Create new token if needed
+
+ERROR: "! [rejected] main -> main (fetch first)"
+FIX:
+  git pull origin main --allow-unrelated-histories
+  git push -u origin main
+
+ERROR: "Repository not found"
+FIX:
+  • Verify repository exists on GitHub
+  • Check URL is correct
+  • Make sure repository is public
+
+ERROR: Site shows 404
+FIX:
+  • Wait 5 minutes (deployment takes time)
+  • Check GitHub Pages is enabled
+  • Verify branch is "main"
+  • Make sure index.html is in root folder
+
+═══════════════════════════════════════════════════════════════
+VERIFICATION CHECKLIST
+═══════════════════════════════════════════════════════════════
+
+After deployment:
+  ✓ Site loads at https://[YOUR-USERNAME].github.io
+  ✓ All navigation links work
+  ✓ Hero section displays correctly
+  ✓ Projects section shows all cards
+  ✓ Skills section visible
+  ✓ Contact section appears
+  ✓ Mobile view works (test on phone)
+  ✓ No console errors (F12 → Console)
+
+═══════════════════════════════════════════════════════════════
+QUICK REFERENCE COMMANDS
+═══════════════════════════════════════════════════════════════
+
+Check status:         git status
+View changes:         git diff
+View log:            git log --oneline
+Undo changes:        git checkout -- filename
+View remotes:        git remote -v
+Pull updates:        git pull
+Push changes:        git push
+
+═══════════════════════════════════════════════════════════════
+SUCCESS! 🎉
+═══════════════════════════════════════════════════════════════
+
+Your portfolio is now live at:
+  https://[YOUR-USERNAME].github.io
+
+Share it:
+  ✓ Add to LinkedIn
+  ✓ Include in email signature
+  ✓ Use in job applications
+  ✓ Share on social media
+
+═══════════════════════════════════════════════════════════════
