@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Project: Halifax Housing Market & Big Data ETL</title>
+    <style>
+        body { font-family: 'Arial', sans-serif; line-height: 1.6; color: #333; max-width: 900px; margin: 0 auto; padding: 20px; background-color: #f8f8f8; }
+        header { text-align: center; margin-bottom: 40px; padding: 20px; background-color: #2c3e50; color: #ecf0f1; border-radius: 8px; }
+        h1 { margin-top: 0; font-size: 2.5em; }
+        h2 { border-bottom: 2px solid #3498db; padding-bottom: 5px; color: #2c3e50; margin-top: 30px; }
+        .section { margin-bottom: 40px; background-color: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .tools-list { list-style: none; padding: 0; display: flex; flex-wrap: wrap; justify-content: space-around; }
+        .tools-list li { background: #e74c3c; color: white; padding: 8px 15px; margin: 5px; border-radius: 5px; font-weight: bold; }
+        .viz-mockup { text-align: center; margin: 20px 0; border: 2px dashed #bdc3c7; padding: 15px; border-radius: 5px; background-color: #fafafa; }
+        .key-metric { font-weight: bold; color: #2980b9; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Halifax Housing Market & Big Data ETL 🛠️</h1>
+        <p>A Data Science Project: Scaling Geospatial Analysis for High-Value Investment Insights</p>
+    </header>
+
+    <div class="section">
+        <h2>🚀 Project Challenge & Scope</h2>
+        <p>This project was designed to solve a dual challenge: **1)** Demonstrate proficiency in processing large-scale geospatial data, and **2)** Generate actionable, micro-level property insights for a real estate client.</p>
+
+        <h3>Core Technical Challenge: The 5GB+ Constraint</h3>
+        <p>The central technical task involved extracting building footprints and calculating the precise **Area ($\mathbf{m^2}$) of every structure** from a <span class="key-metric">multi-gigabyte OpenStreetMap (OSM) PBF file</span>. This required a direct performance comparison between two leading technologies:</p>
+        <ul>
+            <li>**PySpark/Sedona:** The distributed computing approach.</li>
+            <li>**Pandas/pyrosm/GeoPandas:** The single-node optimization approach.</li>
+        </ul>
+
+        <h3>Key Analytical Questions Addressed (7/10)</h3>
+        <p>Using the derived $\mathbf{m^2}$ area, property assessment history, and granular permit data, the project answered 10 critical questions, including:</p>
+        <ol>
+            <li>**Undervalued Parcels (Q9):** Identifying properties that are statistically undervalued relative to nearby sales, normalized by $\mathbf{m^2}$ area. (The main project result).</li>
+            <li>**Value per $\mathbf{m^2}$ (Q3):** Mapping the highest assessed value per unit of land/structure.</li>
+            <li>**Redevelopment Candidates (Q5):** Finding parcels with low unit counts but large building footprints.</li>
+            <li>**Permit Timeliness (Q6):** Calculating the average time from application to issuance for construction permits.</li>
+        </ol>
+    </div>
+
+    <div class="section">
+        <h2>Technology Stack & Tools Used</h2>
+        <p>The project leveraged a modern, mixed-stack approach combining scalable big data tools with efficient Python analysis libraries.</p>
+        <ul class="tools-list">
+            <li>PySpark (Big Data)</li>
+            <li>Apache Sedona (Geospatial distributed processing)</li>
+            <li>Pandas/NumPy (Data Cleaning & Aggregation)</li>
+            <li>GeoPandas (Local Spatial Analysis)</li>
+            <li>pyrosm (OSM PBF local extraction)</li>
+            <li>Scikit-learn (Regression Modeling for Q9)</li>
+            <li>Matplotlib/Folium (Visualization)</li>
+            <li>Osmium-tool (PBF Clipping Utility)</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Key Results & Data Visualizations</h2>
+        <p>The core of the analysis involves demonstrating both advanced data cleaning (temporal math, string extraction) and high-value predictive modeling.</p>
+
+        <h3>Result 1: Simplified Hedonic Valuation Model (Foundation for Q9)</h3>
+        <p>This visualization showcases the predictive foundation for Q9, modeling Assessed Value as a function of Total Rental Units. This simple model demonstrates an $\mathbf{{R^2}} \approx 0.56$, confirming a strong linear relationship before integrating the crucial $\mathbf{{m^2}}$ Area feature and sales data in the final Q9 model.</p>
+        <div class="viz-mockup">
+            <img src="Code_Generated_Image.png" alt="Scatter plot showing Assessed Value vs. Total Rental Units with a linear regression line." style="max-width: 100%; height: auto; border: 1px solid #ccc;">
+            <p style="font-style: italic;">Visualization derived from the Building Layer data, illustrating the primary relationship used for predicting value.</p>
+        </div>
+
+        <h3>Result 2: Undervalued Investment Opportunities (Q9)</h3>
+        <p>A heat map showing the Undervaluation Score (the residual error from the hedonic pricing model) across the municipality. Parcels in the top quartile of undervaluation were highlighted as immediate investment targets.</p>
+        <div class="viz-mockup">
+            [MOCK-UP: Map of Undervaluation Scores - Requires OSM ETL to generate]
+        </div>
+
+        <h3>Result 3: Value Density per $\mathbf{m^2}$ (Q3)</h3>
+        <p>A bar chart ranking building types by their assessed value per unit of area, revealing which typologies offer the highest density of financial value relative to their physical footprint.</p>
+        <div class="viz-mockup">
+            [MOCK-UP: Bar chart: Building Typology vs. Assessed Value per $\mathbf{m^2}$ - Requires OSM ETL to generate]
+        </div>
+    </div>
+
+</body>
+</html>

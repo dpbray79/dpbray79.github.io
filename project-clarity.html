@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,15 +15,18 @@
             padding: 100px 0 80px;
             background: white;
         }
+
         .project-header {
             text-align: center;
             margin-bottom: 3rem;
         }
+
         .project-header h1 {
             font-size: 2.5rem;
             color: var(--text-primary);
             margin-bottom: 1rem;
         }
+
         .project-meta {
             display: flex;
             gap: 2rem;
@@ -30,39 +34,47 @@
             flex-wrap: wrap;
             margin-bottom: 2rem;
         }
+
         .meta-item {
             display: flex;
             align-items: center;
             gap: 0.5rem;
             color: var(--text-secondary);
         }
+
         .project-body {
             max-width: 900px;
             margin: 0 auto;
         }
+
         .project-section {
             margin-bottom: 3rem;
         }
+
         .project-section h2 {
             color: var(--primary-color);
             margin-bottom: 1rem;
             font-size: 1.8rem;
         }
+
         .project-section p {
             color: var(--text-secondary);
             line-height: 1.8;
             margin-bottom: 1rem;
         }
+
         .project-section ul {
             list-style: none;
             padding-left: 0;
         }
+
         .project-section li {
             padding: 0.5rem 0;
             padding-left: 1.5rem;
             position: relative;
             color: var(--text-secondary);
         }
+
         .project-section li::before {
             content: '✓';
             position: absolute;
@@ -70,12 +82,14 @@
             color: var(--success-color);
             font-weight: bold;
         }
+
         .tech-stack {
             display: flex;
             flex-wrap: wrap;
             gap: 0.5rem;
             margin-top: 1rem;
         }
+
         .tech-badge {
             background: var(--bg-light);
             color: var(--primary-color);
@@ -83,6 +97,7 @@
             border-radius: 20px;
             font-weight: 500;
         }
+
         .embedded-content {
             background: var(--bg-light);
             padding: 2rem;
@@ -90,6 +105,7 @@
             margin: 2rem 0;
             text-align: center;
         }
+
         .back-btn {
             display: inline-flex;
             align-items: center;
@@ -100,11 +116,13 @@
             margin-bottom: 2rem;
             transition: gap 0.3s ease;
         }
+
         .back-btn:hover {
             gap: 1rem;
         }
     </style>
 </head>
+
 <body>
     <!-- Navigation -->
     <nav class="navbar">
@@ -126,11 +144,11 @@
             <a href="index.html#projects" class="back-btn">
                 <i class="fas fa-arrow-left"></i> Back to Projects
             </a>
-            
+
             <div class="project-header">
                 <h1>Clarity Coach AI</h1>
                 <p style="font-size: 1.2rem; color: var(--text-secondary); max-width: 700px; margin: 0 auto;">
-                    Production RAG-based educational platform utilizing LLM APIs, vector embeddings, 
+                    Production RAG-based educational platform utilizing LLM APIs, vector embeddings,
                     and semantic search for personalized learning experiences
                 </p>
                 <div class="project-meta">
@@ -153,15 +171,16 @@
                 <div class="project-section">
                     <h2>Project Overview</h2>
                     <p>
-                        Clarity Coach AI is an AI-powered educational technology application that leverages 
-                        Retrieval-Augmented Generation (RAG) to deliver personalized, contextually-aware learning 
-                        experiences. Developed as part of the Entrepreneur in the Making Grant from Scotiabank and NSCC, 
-                        this project demonstrates advanced capabilities in LLM integration, vector database implementation, 
+                        Clarity Coach AI is an AI-powered educational technology application that leverages
+                        Retrieval-Augmented Generation (RAG) to deliver personalized, contextually-aware learning
+                        experiences. Developed as part of the Entrepreneur in the Making Grant from Scotiabank and NSCC,
+                        this project demonstrates advanced capabilities in LLM integration, vector database
+                        implementation,
                         and intelligent content retrieval systems.
                     </p>
                     <p>
-                        The platform combines speech analysis technology with automated learning pathway generation, 
-                        creating adaptive educational content tailored to individual user needs. This dual-purpose 
+                        The platform combines speech analysis technology with automated learning pathway generation,
+                        creating adaptive educational content tailored to individual user needs. This dual-purpose
                         application serves both speech pathology clinical use and general educational enhancement.
                     </p>
                 </div>
@@ -169,8 +188,8 @@
                 <div class="project-section">
                     <h2>Problem Statement</h2>
                     <p>
-                        Traditional educational platforms lack the ability to dynamically adapt content based on 
-                        individual learning patterns and speech characteristics. Educators and speech pathologists 
+                        Traditional educational platforms lack the ability to dynamically adapt content based on
+                        individual learning patterns and speech characteristics. Educators and speech pathologists
                         need tools that can:
                     </p>
                     <ul>
@@ -188,11 +207,16 @@
                         The application architecture implements a full RAG pipeline with the following components:
                     </p>
                     <ul>
-                        <li><strong>Vector Database Integration:</strong> Implemented semantic search using embedding models to retrieve contextually relevant educational content from large knowledge bases</li>
-                        <li><strong>LLM API Integration:</strong> Developed prompt engineering strategies and context management systems for generating personalized responses and learning materials</li>
-                        <li><strong>Automated Learning Pathways:</strong> Built intelligent routing system that adapts content delivery based on user progress, learning style, and performance metrics</li>
-                        <li><strong>Speech Analysis Engine:</strong> Trained and tested machine learning models for speech pattern recognition and analysis</li>
-                        <li><strong>User Interface:</strong> Designed intuitive, accessible interface optimized for educational workflows and real-time interaction</li>
+                        <li><strong>Vector Database Integration:</strong> Implemented semantic search using embedding
+                            models to retrieve contextually relevant educational content from large knowledge bases</li>
+                        <li><strong>LLM API Integration:</strong> Developed prompt engineering strategies and context
+                            management systems for generating personalized responses and learning materials</li>
+                        <li><strong>Automated Learning Pathways:</strong> Built intelligent routing system that adapts
+                            content delivery based on user progress, learning style, and performance metrics</li>
+                        <li><strong>Speech Analysis Engine:</strong> Trained and tested machine learning models for
+                            speech pattern recognition and analysis</li>
+                        <li><strong>User Interface:</strong> Designed intuitive, accessible interface optimized for
+                            educational workflows and real-time interaction</li>
                     </ul>
                 </div>
 
@@ -229,22 +253,22 @@
                 <div class="project-section">
                     <h2>Development Process</h2>
                     <p>
-                        <strong>Research Phase:</strong> Conducted extensive research on RAG architectures, 
-                        LLM capabilities, and educational technology best practices. Evaluated various embedding 
+                        <strong>Research Phase:</strong> Conducted extensive research on RAG architectures,
+                        LLM capabilities, and educational technology best practices. Evaluated various embedding
                         models and vector databases for optimal performance.
                     </p>
                     <p>
-                        <strong>Model Training:</strong> Trained and tested machine learning models for speech 
-                        analysis, conducting iterative optimization and validation testing to ensure accuracy 
+                        <strong>Model Training:</strong> Trained and tested machine learning models for speech
+                        analysis, conducting iterative optimization and validation testing to ensure accuracy
                         and real-world applicability.
                     </p>
                     <p>
-                        <strong>RAG Implementation:</strong> Built end-to-end RAG pipeline including document 
-                        processing, embedding generation, vector storage, retrieval mechanisms, and response 
+                        <strong>RAG Implementation:</strong> Built end-to-end RAG pipeline including document
+                        processing, embedding generation, vector storage, retrieval mechanisms, and response
                         generation with LLM integration.
                     </p>
                     <p>
-                        <strong>User Testing:</strong> Conducted user experience testing with educators and 
+                        <strong>User Testing:</strong> Conducted user experience testing with educators and
                         students to refine interface design and optimize automated learning pathway logic.
                     </p>
                 </div>
@@ -261,13 +285,12 @@
                 </div>
 
                 <div class="embedded-content">
-                    <h3 style="color: var(--primary-color); margin-bottom: 1rem;">Download Full Project Documentation</h3>
+                    <h3 style="color: var(--primary-color); margin-bottom: 1rem;">Download Full Project Documentation
+                    </h3>
                     <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">
                         Access detailed technical documentation, architecture diagrams, and code samples
                     </p>
-                    <a href="https://drive.google.com/file/d/YOUR_CLARITY_PORTFOLIO_ID/view" 
-                       target="_blank" 
-                       class="btn btn-primary">
+                    <a href="assets/documents/clarity_coach_portfolio.pdf" target="_blank" class="btn btn-primary">
                         <i class="fas fa-download"></i> Download Portfolio (PDF)
                     </a>
                 </div>
@@ -297,7 +320,7 @@
             <p>&copy; 2025 Dylan Patrick Bray. All rights reserved.</p>
             <div class="footer-links">
                 <a href="https://www.linkedin.com/in/dylanbrayitsolutions" target="_blank">LinkedIn</a>
-                <a href="https://github.com/YOUR_GITHUB" target="_blank">GitHub</a>
+                <a href="https://github.com/dpbray79" target="_blank">GitHub</a>
                 <a href="mailto:dpbray79@gmail.com">Email</a>
             </div>
         </div>
@@ -305,4 +328,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>
